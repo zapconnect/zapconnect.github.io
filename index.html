@@ -49,9 +49,7 @@
 
 </head>
 
-
 <body class="dark">
-
     <header class="header">
         <div class="container nav">
             <div class="logo">
@@ -209,16 +207,16 @@
                 <div class="step-advanced">
                     <div class="step-number">1</div>
                     <div class="step-content">
-                        <h4>Envie seus dados</h4>
-                        <p>Documentos, textos ou links do seu negócio.</p>
+                        <h4>Configure o prompt</h4>
+                        <p>Defina regras, linguagem e comportamento da IA.</p>
                     </div>
                 </div>
 
                 <div class="step-advanced">
                     <div class="step-number">2</div>
                     <div class="step-content">
-                        <h4>Treinamento automático</h4>
-                        <p>A IA aprende sozinha com seu conteúdo.</p>
+                        <h4>Conecte ao WhatsApp</h4>
+                        <p>Escaneie o QR Code para ativar o atendimento.</p>
                     </div>
                 </div>
 
@@ -226,11 +224,11 @@
                     <div class="step-number">3</div>
                     <div class="step-content">
                         <h4>IA em produção</h4>
-                        <p>Atendendo clientes 24/7 sem parar.</p>
+                        <p>Atendimento automático 24/7 no WhatsApp.</p>
                     </div>
                 </div>
-
             </div>
+
 
         </div>
     </section>
@@ -325,9 +323,7 @@
 
             <!-- PREVIEW DO PAINEL -->
             <div class="platform-preview">
-
                 <button class="nav-preview left" onclick="prevSlide()">‹</button>
-
                 <div class="preview-slider">
                     <img src="img/painel.png" alt="Painel ZapConnect" class="active" />
                     <img src="img/chat.png" alt="Chat ZapConnect" />
@@ -335,15 +331,10 @@
                     <img src="img/agendamento.png" alt="agendamento ZapConnect" />
                     <img src="img/crm.png" alt=" CRM ZapConnect" />
                 </div>
-
                 <button class="nav-preview right" onclick="nextSlide()">›</button>
-
             </div>
-
-
             <!-- FEATURES DO PAINEL -->
             <div class="platform-features">
-
                 <div class="platform-card">
                     <div class="icon">
                         <i class="fa-solid fa-comments"></i>
@@ -351,7 +342,6 @@
                     <h4>Atendimento Multi-canal</h4>
                     <p>Gerencie WhatsApp, chat e tickets em um único lugar</p>
                 </div>
-
                 <div class="platform-card">
                     <div class="icon">
                         <i class="fa-solid fa-users"></i>
@@ -359,7 +349,6 @@
                     <h4>CRM Completo</h4>
                     <p>Organize contatos e acompanhe todo histórico de interações</p>
                 </div>
-
                 <div class="platform-card">
                     <div class="icon">
                         <i class="fa-solid fa-bullhorn"></i>
@@ -367,8 +356,6 @@
                     <h4>Disparo em massa</h4>
                     <p>Envie mensagens para vários contatos de forma rápida e automatizada.</p>
                 </div>
-
-
                 <div class="platform-card">
                     <div class="icon">
                         <i class="fa-solid fa-calendar-days"></i>
@@ -376,10 +363,7 @@
                     <h4>Agendamento de mensagens</h4>
                     <p>Programe envios automáticos para datas e horários específicos.</p>
                 </div>
-
-
             </div>
-
         </div>
     </section>
 
@@ -567,25 +551,35 @@
                 </div>
 
                 <!-- FORM -->
-                <form class="newsletter-form">
+                <form class="newsletter-form"
+                    action="https://docs.google.com/forms/d/e/1FAIpQLSfhIlLMqn1is5on1-GI2CRQP9VSTMhggR-0Har6Ed9BEgMgfQ/formResponse"
+                    method="POST" target="hidden_iframe">
+
                     <div class="field">
                         <label>Nome</label>
-                        <input type="text" placeholder="Seu nome" />
+                        <input type="text" name="entry.1055886323" placeholder="Seu nome" required />
                     </div>
 
                     <div class="field">
                         <label>E-mail</label>
-                        <input type="email" placeholder="exemplo@gmail.com" />
+                        <input type="email" name="entry.452158561" placeholder="exemplo@gmail.com" required />
                     </div>
 
                     <div class="field">
                         <label>WhatsApp</label>
-                        <input type="tel" placeholder="(99) 99999-9999" />
+                        <input type="tel" name="entry.1927085027" placeholder="(99) 99999-9999" required />
                     </div>
 
                     <button class="btn" type="submit">Enviar</button>
                 </form>
+                <div class="form-success" style="display:none;">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <h3>Mensagem enviada!</h3>
+                    <p>Recebemos seus dados e em breve entraremos em contato pelo WhatsApp.</p>
+                </div>
 
+
+                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
             </div>
 
         </div>

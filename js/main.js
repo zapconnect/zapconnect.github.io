@@ -119,3 +119,52 @@ function resetAutoplay() {
 
 /* inicia automaticamente */
 startAutoplay();
+/* =====================================================
+   FORM GOOGLE FORMS — SUCESSO IMEDIATO (FIX FINAL)
+===================================================== */
+const form = document.querySelector(".newsletter-form");
+const successBox = document.querySelector(".form-success");
+const submitBtn = form.querySelector(".newsletter-form button");
+const iframe = document.getElementById("hidden_iframe");
+
+let submitted = false;
+
+/* AO ENVIAR */
+form.addEventListener("submit", () => {
+  submitted = true;
+  submitBtn.disabled = true;
+  submitBtn.textContent = "Enviando...";
+});
+
+/* QUANDO O GOOGLE FORM RESPONDER */
+iframe.addEventListener("load", () => {
+  if (!submitted) return;
+
+  form.style.display = "none";
+  successBox.style.display = "block";
+});
+
+
+/* ================================
+   MÁSCARA WHATSAPP (CORRIGIDA)
+================================ */
+const phoneInput = document.querySelector('.newsletter-form input[type="tel"]');
+
+phoneInput.addEventListener("input", e => {
+  let value = e.target.value.replace(/\D/g, "");
+
+  // limita a 11 dígitos
+  if (value.length > 11) value = value.slice(0, 11);
+
+  if (value.length <= 2) {
+    value = `(${value}`;
+  } else if (value.length <= 7) {
+    value = `(${value.slice(0, 2)}) ${value.slice(2)}`;
+  } else {
+    value = `(${value.slice(0, 2)}) ${value.slice(2, 7)}-${value.slice(7)}`;
+  }
+
+  e.target.value = value;
+});
+
+
