@@ -566,7 +566,8 @@ nav a:hover {
 .platform-preview {
   position: relative;
   max-width: 1100px;
-  margin: 0 auto 90px;
+  margin: 0 auto 80px;
+  gap: 0;
 }
 
 .platform-preview img {
@@ -667,7 +668,7 @@ nav a:hover {
 
 @media (max-width: 768px) {
   .platform {
-    padding: 100px 0;
+    padding: 30px 0;
   }
 
   .platform-head h2 {
@@ -1469,3 +1470,5 @@ body.dark .footer-bottom {
 body.dark .footer-bottom strong {
   color: #fff;
 }
+.preview-slider img { display: none; }
+.preview-slider img.active { display: block; }

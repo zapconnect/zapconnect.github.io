@@ -78,3 +78,44 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
   });
 });
 document.getElementById("year").textContent = new Date().getFullYear();
+/* =====================================================
+   PLATFORM PREVIEW SLIDER — AUTOPLAY + FADE
+===================================================== */
+let currentSlide = 0;
+const slides = document.querySelectorAll(".preview-slider img");
+let sliderInterval = null;
+const SLIDE_TIME = 4000; // 4 segundos
+
+function showSlide(index) {
+  if (!slides.length) return;
+
+  slides.forEach(slide => slide.classList.remove("active"));
+  slides[index].classList.add("active");
+}
+
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+  resetAutoplay();
+}
+
+function prevSlide() {
+  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+  showSlide(currentSlide);
+  resetAutoplay();
+}
+
+function startAutoplay() {
+  sliderInterval = setInterval(() => {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }, SLIDE_TIME);
+}
+
+function resetAutoplay() {
+  clearInterval(sliderInterval);
+  startAutoplay();
+}
+
+/* inicia automaticamente */
+startAutoplay();

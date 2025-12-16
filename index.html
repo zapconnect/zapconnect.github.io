@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <title>ZapConnect — Automação Inteligente para WhatsApp</title>
+    <title>ZapConnect</title>
 
     <meta name="description"
         content="ZapConnect é uma plataforma de automação inteligente para WhatsApp, com IA, atendimento humano e integração completa." />
@@ -169,9 +169,10 @@
                     <div class="icon">
                         <i class="fa-solid fa-clock"></i>
                     </div>
-                    <h3>Agendamento de mensagens</h3>
-                    <p>Envios automáticos no horário que você definir.</p>
+                    <h3>Economia de tempo</h3>
+                    <p>Menos tarefas manuais, mais produtividade.</p>
                 </div>
+
 
                 <div class="feature-box">
                     <div class="icon">
@@ -324,12 +325,21 @@
 
             <!-- PREVIEW DO PAINEL -->
             <div class="platform-preview">
-                <button class="nav-preview left">‹</button>
 
-                <img src="https://placehold.co/1100x600" alt="Painel ZapConnect" />
+                <button class="nav-preview left" onclick="prevSlide()">‹</button>
 
-                <button class="nav-preview right">›</button>
+                <div class="preview-slider">
+                    <img src="img/painel.png" alt="Painel ZapConnect" class="active" />
+                    <img src="img/chat.png" alt="Chat ZapConnect" />
+                    <img src="img/disparo.png" alt="Disparo ZapConnect" />
+                    <img src="img/agendamento.png" alt="agendamento ZapConnect" />
+                    <img src="img/crm.png" alt=" CRM ZapConnect" />
+                </div>
+
+                <button class="nav-preview right" onclick="nextSlide()">›</button>
+
             </div>
+
 
             <!-- FEATURES DO PAINEL -->
             <div class="platform-features">
@@ -352,19 +362,21 @@
 
                 <div class="platform-card">
                     <div class="icon">
-                        <i class="fa-solid fa-ticket"></i>
+                        <i class="fa-solid fa-bullhorn"></i>
                     </div>
-                    <h4>Gestão de Tickets</h4>
-                    <p>Abertos, pendentes e resolvidos em um dashboard intuitivo</p>
+                    <h4>Disparo em massa</h4>
+                    <p>Envie mensagens para vários contatos de forma rápida e automatizada.</p>
                 </div>
+
 
                 <div class="platform-card">
                     <div class="icon">
-                        <i class="fa-solid fa-chart-simple"></i>
+                        <i class="fa-solid fa-calendar-days"></i>
                     </div>
-                    <h4>Métricas em Tempo Real</h4>
-                    <p>Avalie performance e tome decisões baseadas em dados</p>
+                    <h4>Agendamento de mensagens</h4>
+                    <p>Programe envios automáticos para datas e horários específicos.</p>
                 </div>
+
 
             </div>
 
