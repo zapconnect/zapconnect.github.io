@@ -77,3 +77,4 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     target.scrollIntoView({ behavior: "smooth" });
   });
 });
+document.getElementById("year").textContent = new Date().getFullYear();

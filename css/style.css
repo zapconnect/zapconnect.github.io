@@ -1380,3 +1380,92 @@ body.dark footer {
   transform: translateY(0);
 }
 
+/* ================================
+   FOOTER SOCIALS
+================================ */
+.footer-brand {
+  max-width: 360px;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.footer-socials a {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--primary-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  font-size: 16px;
+  transition: all .25s ease;
+}
+
+.footer-socials a:hover {
+  background: var(--primary);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.footer-socials a {
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+
+/* FOOTER LINKS */
+.footer-links a {
+  display: block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: var(--muted);
+  transition: color .2s;
+}
+
+.footer-links a:hover {
+  color: var(--dark);
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .footer-grid {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .footer-links {
+    text-align: left;
+  }
+}
+/* ================================
+   FOOTER BOTTOM
+================================ */
+.footer-bottom {
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid #e5e7eb;
+  text-align: center;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.footer-bottom .dev {
+  margin-left: 6px;
+}
+
+.footer-bottom strong {
+  color: var(--dark);
+}
+
+/* DARK MODE (se estiver usando body.dark) */
+body.dark .footer-bottom {
+  border-color: #1f2937;
+}
+
+body.dark .footer-bottom strong {
+  color: #fff;
+}
