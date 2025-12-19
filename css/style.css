@@ -1506,3 +1506,138 @@ body.dark .form-success {
   background: #022c22;
   color: #6ee7b7;
 }
+/* ================================
+   LEAD WHATSAPP SECTION
+================================ */
+.lead-whatsapp {
+  padding: var(--space) 0;
+  background: var(--bg);
+}
+
+.lead-whatsapp-box {
+  background: var(--white);
+  border-radius: 36px;
+  padding: 80px;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 80px;
+  box-shadow: var(--shadow-lg);
+  align-items: center;
+}
+
+/* TEXTO */
+.lead-whatsapp-text h2 {
+  font-size: 42px;
+  margin: 20px 0 18px;
+  color: var(--dark);
+  line-height: 1.15;
+}
+
+.lead-whatsapp-text h2 span {
+  color: var(--primary);
+}
+
+.lead-whatsapp-text p {
+  font-size: 18px;
+  color: var(--muted);
+  margin-bottom: 28px;
+  max-width: 520px;
+}
+
+/* BENEFÍCIOS */
+.lead-benefits {
+  list-style: none;
+  padding: 0;
+}
+
+.lead-benefits li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 15px;
+  color: var(--text);
+}
+
+.lead-benefits i {
+  color: var(--primary);
+}
+
+/* CTA */
+.lead-whatsapp-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #25D366;
+  color: #fff;
+  padding: 16px 28px;
+  font-size: 18px;
+  font-weight: 800;
+  border-radius: 14px;
+  text-decoration: none;
+  box-shadow: 0 20px 50px rgba(37, 211, 102, .45);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.btn-whatsapp i {
+  font-size: 26px;
+}
+
+.btn-whatsapp:hover {
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 26px 70px rgba(37, 211, 102, .55);
+}
+
+.lead-note {
+  margin-top: 18px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* ================================
+   RESPONSIVO
+================================ */
+@media (max-width: 900px) {
+  .lead-whatsapp-box {
+    grid-template-columns: 1fr;
+    padding: 60px 40px;
+    gap: 50px;
+    text-align: center;
+  }
+
+  .lead-whatsapp-text h2 {
+    font-size: 34px;
+  }
+
+  .lead-whatsapp-text p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .lead-benefits {
+    display: inline-block;
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .lead-whatsapp-box {
+    padding: 48px 26px;
+  }
+
+  .lead-whatsapp-text h2 {
+    font-size: 28px;
+  }
+
+  .btn-whatsapp {
+    width: 100%;
+    justify-content: center;
+  }
+}
