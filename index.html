@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <title>ZapConnect</title>
+    <title>ZapConnect | IA para WhatsApp que reduz custo de atendimento</title>
 
     <meta name="description"
-        content="ZapConnect é uma plataforma de automação inteligente para WhatsApp, com IA, atendimento humano e integração completa." />
+        content="Para empresas que atendem no WhatsApp: treine uma IA com as regras do seu negócio, responda clientes 24/7 e reduza até 60% do custo operacional." />
     <meta name="keywords" content="WhatsApp bot, automação WhatsApp, chatbot IA, ZapConnect, atendimento automático" />
     <meta name="author" content="ZapConnect" />
     <meta name="theme-color" content="#6d28d9" />
@@ -19,16 +19,16 @@
     <meta name="robots" content="index, follow" />
 
     <!-- ================= OPEN GRAPH (REDES SOCIAIS) ================= -->
-    <meta property="og:title" content="ZapConnect — Automação Inteligente" />
-    <meta property="og:description" content="Automação inteligente para WhatsApp com IA e atendimento humano." />
+    <meta property="og:title" content="ZapConnect | IA para WhatsApp que reduz custo de atendimento" />
+    <meta property="og:description" content="Responda clientes 24/7 no WhatsApp com uma IA treinada no seu negócio e reduza até 60% do custo operacional." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://zapconnect.github.io" />
     <meta property="og:image" content="https://zapconnect.github.io" />
 
     <!-- ================= TWITTER ================= -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="ZapConnect — Automação Inteligente" />
-    <meta name="twitter:description" content="Automação inteligente para WhatsApp com IA." />
+    <meta name="twitter:title" content="ZapConnect | IA para WhatsApp que reduz custo de atendimento" />
+    <meta name="twitter:description" content="Responda clientes 24/7 no WhatsApp com uma IA treinada no seu negócio e reduza até 60% do custo operacional." />
     <meta name="twitter:image" content="https://zapconnect.github.io/" />
 
     <!-- ================= FAVICON ================= -->
@@ -42,7 +42,7 @@
 
     <!-- ================= ICONES ================= -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        integrity="sha512-SzlrxWtvJf8..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- ================= CSS ================= -->
     <link rel="stylesheet" href="css/style.css" />
@@ -50,6 +50,11 @@
 </head>
 
 <body  class="dark">
+    <div class="urgency-bar">
+        &#128293; Oferta de lançamento: setup gratuito (R$ 297) para os próximos
+        <strong id="slots">23</strong> clientes —
+        <a href="#captura">Garantir vaga</a>
+    </div>
     <header class="header">
         <div class="container nav">
             <div class="logo">
@@ -72,9 +77,9 @@
     <!-- HERO -->
     <section class="hero">
         <div class="container hero-grid">
-            <div>
-                <span class="badge">⚡ IA 24/7 para seu negócio</span>
-                <h1>Automatize atendimento,<br>vendas e suporte com IA</h1>
+            <div class="hero-copy">
+                <span class="badge">IA treinada na sua operação, com fallback humano</span>
+                <h1>Seu WhatsApp respondendo<br>clientes em <span style="color:var(--primary)">3 segundos</span>,<br>24h por dia — sem você</h1>
                 <div class="footer-socials">
                     <a href="https://www.instagram.com/ozapconnect?igsh=NmFoZjJ2YjVmYWJx" class="social instagram"
                         aria-label="Instagram do ZapConnect" title="Instagram do ZapConnect" target="_blank"
@@ -101,15 +106,18 @@
                     </a>
                 </div>
 
-                <p>
-                    Crie uma inteligência artificial treinada para o seu negócio
-                    e atenda clientes automaticamente no WhatsApp.
+                <p class="subheadline">
+                    Conecte uma IA ao seu número em menos de 10 minutos.
+                    Nenhum código. Nenhuma mensagem perdida.
                 </p>
 
                 <div class="hero-actions">
-                    <a class="btn big" href="#captura">Criar minha IA</a>
-                    <a class="btn ghost" href="#">Ver demonstração</a>
+                    <a class="btn big" href="#captura">Testar grátis por 7 dias</a>
+                    <a class="btn ghost" href="#">Ver IA em ação</a>
                 </div>
+                <p class="cta-micro">
+                    &#10003; Sem cartão de crédito &nbsp;&middot;&nbsp; &#10003; Cancela quando quiser &nbsp;&middot;&nbsp; &#10003; Setup em 10 min
+                </p>
 
                 <div class="metrics">
                     <div><strong>+300%</strong><span>Produtividade</span></div>
@@ -118,11 +126,20 @@
                 </div>
             </div>
 
-            <div class="hero-mockup">
+            <div class="hero-mockup hero-visual">
                 <img src="img/bot2.png" alt="Robo e smartphone com chat" />
             </div>
         </div>
     </section>
+
+    <div class="trust-bar">
+        <div class="container trust-bar-grid">
+            <span><i class="fa-solid fa-shield-halved"></i> Dados criptografados</span>
+            <span><i class="fa-solid fa-circle-check"></i> Compatível com LGPD</span>
+            <span><i class="fa-solid fa-server"></i> 99,9% de uptime</span>
+            <span><i class="fa-brands fa-whatsapp"></i> Via WhatsApp Web</span>
+        </div>
+    </div>
 
     <!-- LOGOS -->
     <section class="logos">
@@ -207,7 +224,7 @@
 
             <div class="section-head">
                 <h2>Como funciona</h2>
-                <p>Da configuração ao atendimento em poucos minutos</p>
+                <p>Veja exatamente o que acontece depois do clique: você escreve em texto simples, conecta seu número e ativa a IA em menos de 10 minutos.</p>
             </div>
 
             <div class="steps-timeline">
@@ -215,28 +232,121 @@
                 <div class="step-advanced">
                     <div class="step-number">1</div>
                     <div class="step-content">
-                        <h4>Configure o prompt</h4>
-                        <p>Defina regras, linguagem e comportamento da IA.</p>
+                        <div class="step-top">
+                            <span class="step-time"><i class="fa-regular fa-clock"></i> ~3 minutos</span>
+                            <div class="step-icon" aria-hidden="true">
+                                <i class="fa-solid fa-comment-dots"></i>
+                            </div>
+                        </div>
+                        <h4>Descreva seu negócio em texto livre</h4>
+                        <p>Você escreve como em um WhatsApp: "Sou uma clínica, atendo de segunda a sábado..." A IA aprende seu tom, suas regras e quando chamar alguém da equipe. <strong>Não precisa de programação.</strong></p>
                     </div>
                 </div>
 
                 <div class="step-advanced">
                     <div class="step-number">2</div>
                     <div class="step-content">
-                        <h4>Conecte ao WhatsApp</h4>
-                        <p>Escaneie o QR Code para ativar o atendimento.</p>
+                        <div class="step-top">
+                            <span class="step-time"><i class="fa-regular fa-clock"></i> ~2 minutos</span>
+                            <div class="step-icon" aria-hidden="true">
+                                <i class="fa-solid fa-qrcode"></i>
+                            </div>
+                        </div>
+                        <h4>Escaneie o QR Code e conecte seu número</h4>
+                        <p>Abra o WhatsApp Web, faça a conexão e escolha quando a IA responde sozinha ou transfere a conversa para um atendente humano.</p>
                     </div>
                 </div>
 
                 <div class="step-advanced">
                     <div class="step-number">3</div>
                     <div class="step-content">
-                        <h4>IA em produção</h4>
-                        <p>Atendimento automático 24/7 no WhatsApp.</p>
+                        <div class="step-top">
+                            <span class="step-time"><i class="fa-regular fa-clock"></i> ~5 minutos</span>
+                            <div class="step-icon" aria-hidden="true">
+                                <i class="fa-solid fa-bolt"></i>
+                            </div>
+                        </div>
+                        <h4>Ative e acompanhe as primeiras conversas</h4>
+                        <p>A IA começa a responder em segundos, qualifica leads, tira dúvidas repetidas e avisa seu time sempre que a conversa pedir atenção humana.</p>
                     </div>
                 </div>
             </div>
+            <p class="steps-note"><i class="fa-solid fa-circle-check"></i> Não precisa de programação: você configura tudo em texto simples e conecta seu WhatsApp por QR Code.</p>
 
+
+        </div>
+    </section>
+    <!-- COMPARATIVO -->
+    <section class="compare">
+        <div class="container">
+
+            <div class="compare-head">
+                <span class="pill">Por que ZapConnect</span>
+                <h2>ZapConnect vs. atendimento tradicional</h2>
+                <p>
+                    A diferença não é só automatizar mensagens. É responder mais rápido,
+                    perder menos oportunidades e organizar a operação sem aumentar o peso do time.
+                </p>
+            </div>
+
+            <div class="compare-grid">
+                <div class="compare-col bad">
+                    <div class="compare-label">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                        <span>Sem ZapConnect</span>
+                    </div>
+
+                    <ul class="compare-list">
+                        <li>
+                            <i class="fa-solid fa-xmark"></i>
+                            <span>Responde só em horário comercial e acumula fila quando o volume cresce.</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-xmark"></i>
+                            <span>Uma mensagem esquecida pode virar uma venda perdida.</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-xmark"></i>
+                            <span>Cada aumento de demanda exige mais gente para dar conta do atendimento.</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-xmark"></i>
+                            <span>Informações ficam espalhadas e o histórico do cliente se perde com facilidade.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="compare-col good">
+                    <div class="compare-label">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Com ZapConnect</span>
+                    </div>
+
+                    <ul class="compare-list">
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            <span>Responde em segundos, 24h por dia, mesmo fora do expediente.</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            <span>Nenhuma conversa fica sem retorno e o lead não esfria na espera.</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            <span>A IA assume o volume repetitivo e chama o humano só quando precisa.</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            <span>Todo o histórico fica centralizado no CRM para acompanhar atendimento e vendas.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <p class="compare-note">
+                <i class="fa-solid fa-circle-info"></i>
+                Você não troca o atendimento humano: tira o peso operacional e deixa a equipe focada no que realmente precisa de atenção.
+            </p>
 
         </div>
     </section>
@@ -380,38 +490,66 @@
     <!-- PLANOS -->
     <section id="planos" class="pricing">
         <div class="container">
-            <h2>Planos</h2>
+            <div class="section-head pricing-head">
+                <h2>Planos</h2>
+                <p>Escolha o nível ideal para o seu volume de atendimento e teste a operação antes de assumir um compromisso maior.</p>
+            </div>
 
             <div class="pricing-grid">
                 <div class="price-card">
+                    <span class="tag">Para começar rápido</span>
                     <h3>Starter</h3>
-                    <p class="price">R$ 97/mês</p>
+                    <p class="price">R$ 97<small>/mês</small></p>
+                    <p class="price-day">≈ R$ 3,23 por dia</p>
                     <ul>
-                        <li>1 Whatsapp</li>
-                        <li>Até 500 mensagens IA</li>
+                        <li><i class="fa-solid fa-check"></i><span>1 número de WhatsApp conectado</span></li>
+                        <li><i class="fa-solid fa-check"></i><span>Até 500 mensagens com IA por mês</span></li>
+                        <li><i class="fa-solid fa-check"></i><span>1 IA treinada nas regras do seu negócio</span></li>
+                        <li><i class="fa-solid fa-check"></i><span>Respostas 24/7 com fallback para atendimento humano</span></li>
+                        <li><i class="fa-solid fa-check"></i><span>CRM com histórico de conversas e leads</span></li>
+                        <li><i class="fa-solid fa-check"></i><span>Setup guiado para publicar em até 10 minutos</span></li>
+                        <li><i class="fa-solid fa-check"></i><span>7 dias grátis para testar sem risco</span></li>
                     </ul>
-                    <a class="btn ghost" href="#captura">Escolher</a>
+                    <a class="btn ghost" href="#captura">Começar grátis 7 dias</a>
+                    <p class="guarantee">🔒 Garantia de 7 dias. Sem cartão de crédito.</p>
                 </div>
 
                 <div class="price-card highlight">
                     <span class="tag">Mais popular</span>
                     <h3>Pro</h3>
-                    <p class="price">R$ 197/mês</p>
+                    <p class="price">R$ 197<small>/mês</small></p>
+                    <p class="price-day">≈ R$ 6,57 por dia</p>
                     <ul>
-                        <li>3 WhatsApp</li>
-                        <li>Mensagens IA ilimitadas</li>
+                        <li><i class="fa-solid fa-check"></i><span>3 números de WhatsApp simultâneos</span></li>
+                        <li><i class="fa-solid fa-check"></i><span>Mensagens com IA ilimitadas</span></li>
+                        <li><i class="fa-solid fa-check"></i><span>Até 3 IAs para times, unidades ou setores</span></li>
+                        <li><i class="fa-solid fa-check"></i><span>Disparo em massa para campanhas e follow-up</span></li>
+                        <li><i class="fa-solid fa-check"></i><span>CRM completo com histórico e organização de pipeline</span></li>
+                        <li><i class="fa-solid fa-check"></i><span>Agendamento de mensagens e automações recorrentes</span></li>
+                        <li><i class="fa-solid fa-check"></i><span>Suporte via WhatsApp com SLA de até 4 horas</span></li>
+                        <li><i class="fa-solid fa-check"></i><span>7 dias grátis para validar a operação</span></li>
                     </ul>
-                    <a class="btn" href="#captura">Escolher</a>
+                    <a class="btn" href="#captura">Começar grátis 7 dias</a>
+                    <p class="guarantee">🔒 Garantia de 7 dias. Sem cartão de crédito.</p>
                 </div>
 
                 <div class="price-card">
+                    <span class="tag">Operação sob medida</span>
                     <h3>Enterprise</h3>
                     <p class="price">Sob consulta</p>
+                    <p class="price-day">Escopo e investimento ajustados ao volume da sua operação</p>
                     <ul>
-                        <li>Personalizado</li>
-                        <li>Suporte dedicado</li>
+                        <li><i class="fa-solid fa-check"></i><span>Estrutura personalizada para múltiplos números e equipes</span></li>
+                        <li><i class="fa-solid fa-check"></i><span>Volume de mensagens e IAs definido conforme a demanda</span></li>
+                        <li><i class="fa-solid fa-check"></i><span>Fluxos por unidade, setor ou estágio do atendimento</span></li>
+                        <li><i class="fa-solid fa-check"></i><span>CRM completo com processos e campos adaptados ao negócio</span></li>
+                        <li><i class="fa-solid fa-check"></i><span>Disparos, agendamentos e automações avançadas</span></li>
+                        <li><i class="fa-solid fa-check"></i><span>Onboarding consultivo e treinamento do time</span></li>
+                        <li><i class="fa-solid fa-check"></i><span>Suporte prioritário com SLA dedicado</span></li>
+                        <li><i class="fa-solid fa-check"></i><span>Piloto assistido para validar o fluxo antes da expansão</span></li>
                     </ul>
                     <a class="btn ghost" href="#captura">Falar com vendas</a>
+                    <p class="guarantee">🔒 Escopo, implantação e suporte definidos junto com sua equipe.</p>
                 </div>
             </div>
         </div>
@@ -631,9 +769,9 @@
             </div>
 
             <div class="footer-links">
-                <a href="#">Termos</a>
-                <a href="#">Privacidade</a>
-                <a href="#captura">Contato</a>
+                <a href="termos.html">Termos</a>
+                <a href="privacidade.html">Privacidade</a>
+                <a href="contato.html">Contato</a>
             </div>
 
         </div>

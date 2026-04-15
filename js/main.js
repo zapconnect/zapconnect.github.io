@@ -25,25 +25,30 @@ const revealObserver = new IntersectionObserver(
   }
 );
 
+function registerReveal(selector, stagger = 0) {
+  document.querySelectorAll(selector).forEach((el, index) => {
+    el.classList.add("reveal");
+
+    if (stagger) {
+      el.style.setProperty("--reveal-delay", `${index * stagger}s`);
+    }
+
+    revealObserver.observe(el);
+  });
+}
+
 // Elementos que terão animação ao scroll
-document.querySelectorAll(`
-  .hero > .container > div,
-  .hero-mockup,
-  .logos-grid span,
-  .feature-box,
-  .step-advanced,
-  .testimonial-card,
-  .platform-preview,
-  .platform-card,
-  .price-card,
-  .faq-item,
-  .newsletter-box,
-  .cta-box,
-  .footer-grid
-`).forEach(el => {
-  el.classList.add("reveal");
-  revealObserver.observe(el);
-});
+registerReveal(".section-head, .compare-head, .testimonials-head, .platform-head, .faq-head");
+registerReveal(".trust-bar-grid span", 0.08);
+registerReveal(".logos-grid span", 0.06);
+registerReveal(".features-grid-advanced .feature-box", 0.08);
+registerReveal(".steps-timeline .step-advanced", 0.08);
+registerReveal(".steps-note, .compare-note, .platform-preview, .lead-whatsapp-box, .cta-box, .footer-grid");
+registerReveal(".compare-grid .compare-col", 0.1);
+registerReveal(".testimonials-grid .testimonial-card", 0.08);
+registerReveal(".platform-features .platform-card", 0.08);
+registerReveal(".pricing-grid .price-card", 0.08);
+registerReveal(".faq-list .faq-item", 0.06);
 
 /* =====================================================
    FAQ ACCORDION
@@ -77,7 +82,10 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     target.scrollIntoView({ behavior: "smooth" });
   });
 });
-document.getElementById("year").textContent = new Date().getFullYear();
+const yearEl = document.getElementById("year");
+if (yearEl) {
+  yearEl.textContent = new Date().getFullYear();
+}
 /* =====================================================
    PLATFORM PREVIEW SLIDER — AUTOPLAY + FADE
 ===================================================== */
@@ -106,6 +114,8 @@ function prevSlide() {
 }
 
 function startAutoplay() {
+  if (slides.length <= 1) return;
+
   sliderInterval = setInterval(() => {
     currentSlide = (currentSlide + 1) % slides.length;
     showSlide(currentSlide);
@@ -124,25 +134,27 @@ startAutoplay();
 ===================================================== */
 const form = document.querySelector(".newsletter-form");
 const successBox = document.querySelector(".form-success");
-const submitBtn = form.querySelector(".newsletter-form button");
 const iframe = document.getElementById("hidden_iframe");
+const submitBtn = form?.querySelector("button");
 
-let submitted = false;
+if (form && iframe && successBox && submitBtn) {
+  let submitted = false;
 
-/* AO ENVIAR */
-form.addEventListener("submit", () => {
-  submitted = true;
-  submitBtn.disabled = true;
-  submitBtn.textContent = "Enviando...";
-});
+  /* AO ENVIAR */
+  form.addEventListener("submit", () => {
+    submitted = true;
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Enviando...";
+  });
 
-/* QUANDO O GOOGLE FORM RESPONDER */
-iframe.addEventListener("load", () => {
-  if (!submitted) return;
+  /* QUANDO O GOOGLE FORM RESPONDER */
+  iframe.addEventListener("load", () => {
+    if (!submitted) return;
 
-  form.style.display = "none";
-  successBox.style.display = "block";
-});
+    form.style.display = "none";
+    successBox.style.display = "block";
+  });
+}
 
 
 /* ================================
@@ -150,21 +162,23 @@ iframe.addEventListener("load", () => {
 ================================ */
 const phoneInput = document.querySelector('.newsletter-form input[type="tel"]');
 
-phoneInput.addEventListener("input", e => {
-  let value = e.target.value.replace(/\D/g, "");
+if (phoneInput) {
+  phoneInput.addEventListener("input", e => {
+    let value = e.target.value.replace(/\D/g, "");
 
-  // limita a 11 dígitos
-  if (value.length > 11) value = value.slice(0, 11);
+    // limita a 11 dígitos
+    if (value.length > 11) value = value.slice(0, 11);
 
-  if (value.length <= 2) {
-    value = `(${value}`;
-  } else if (value.length <= 7) {
-    value = `(${value.slice(0, 2)}) ${value.slice(2)}`;
-  } else {
-    value = `(${value.slice(0, 2)}) ${value.slice(2, 7)}-${value.slice(7)}`;
-  }
+    if (value.length <= 2) {
+      value = `(${value}`;
+    } else if (value.length <= 7) {
+      value = `(${value.slice(0, 2)}) ${value.slice(2)}`;
+    } else {
+      value = `(${value.slice(0, 2)}) ${value.slice(2, 7)}-${value.slice(7)}`;
+    }
 
-  e.target.value = value;
-});
+    e.target.value = value;
+  });
+}
 
 
