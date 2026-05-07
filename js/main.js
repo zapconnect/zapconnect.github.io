@@ -44,6 +44,8 @@ registerReveal(".logos-grid span", 0.06);
 registerReveal(".features-grid-advanced .feature-box", 0.08);
 registerReveal(".steps-timeline .step-advanced", 0.08);
 registerReveal(".steps-note, .compare-note, .platform-preview, .lead-whatsapp-box, .cta-box, .footer-grid");
+registerReveal(".billing-intro, .billing-card", 0.08);
+registerReveal(".billing-highlights span", 0.06);
 registerReveal(".compare-grid .compare-col", 0.1);
 registerReveal(".testimonials-grid .testimonial-card", 0.08);
 registerReveal(".platform-features .platform-card", 0.08);
@@ -162,8 +164,50 @@ if (form && iframe && successBox && submitBtn) {
 ================================ */
 const phoneInput = document.querySelector('.newsletter-form input[type="tel"]');
 
+function formatWhatsappPhone(rawValue) {
+  let digits = rawValue.replace(/\D/g, "");
+  const hasCountryCode =
+    /^\+?55[\s(]/.test(rawValue.trim()) ||
+    (digits.startsWith("55") && digits.length > 10);
+
+  if (hasCountryCode) {
+    digits = digits.slice(0, 13);
+
+    const countryCode = digits.slice(0, 2);
+    const ddd = digits.slice(2, 4);
+    let number = digits.slice(4);
+
+    if (number.length > 8) {
+      number = number.slice(-8);
+    }
+
+    if (digits.length <= 2) return countryCode;
+    if (digits.length <= 4) return `${countryCode} (${ddd}`;
+    if (number.length <= 4) return `${countryCode} (${ddd}) ${number}`;
+
+    return `${countryCode} (${ddd}) ${number.slice(0, 4)}-${number.slice(4)}`;
+  }
+
+  digits = digits.slice(0, 11);
+
+  const ddd = digits.slice(0, 2);
+  let number = digits.slice(2);
+
+  if (number.length > 8) {
+    number = number.slice(-8);
+  }
+
+  if (digits.length <= 2) return `(${ddd}`;
+  if (number.length <= 4) return `(${ddd}) ${number}`;
+
+  return `(${ddd}) ${number.slice(0, 4)}-${number.slice(4)}`;
+}
+
 if (phoneInput) {
   phoneInput.addEventListener("input", e => {
+    e.target.value = formatWhatsappPhone(e.target.value);
+    return;
+
     let value = e.target.value.replace(/\D/g, "");
 
     // limita a 11 dígitos

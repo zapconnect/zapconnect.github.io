@@ -1082,6 +1082,27 @@ nav a:hover {
   line-height: 1.5;
 }
 
+.platform-note {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 12px;
+  max-width: 900px;
+  margin: 32px auto 0;
+  padding: 18px 22px;
+  border-radius: 18px;
+  background: rgba(109,40,217,.08);
+  color: var(--muted);
+  line-height: 1.6;
+  text-align: left;
+}
+
+.platform-note i {
+  color: var(--primary);
+  font-size: 18px;
+  margin-top: 3px;
+}
+
 /* ================================
    BILLING
 ================================ */
@@ -1285,6 +1306,11 @@ nav a:hover {
 
   .platform-features {
     grid-template-columns: 1fr;
+  }
+
+  .platform-note {
+    padding: 16px 18px;
+    text-align: left;
   }
 }
 
@@ -2109,6 +2135,16 @@ body.dark .billing-brand {
   border-color: rgba(0,177,234,.24);
 }
 
+body.dark .platform-note {
+  background: rgba(116,100,241,.14);
+  border: 1px solid #28304f;
+  color: #dbe4ff;
+}
+
+body.dark .platform-note i {
+  color: #a5b4fc;
+}
+
 /* ÍCONES (mais suaves) */
 body.dark .icon,
 body.dark .step-number {
@@ -2169,7 +2205,9 @@ body.dark .cta-box {
     #7c6df6,
     #6b5cf6
   );
-}body.dark .icon i {
+}
+
+body.dark .icon i {
   color: #dbe4ff;
 }
 
