@@ -361,6 +361,21 @@ nav a:hover {
   font-weight: 600;
 }
 
+.logos-grid span {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logos-grid img {
+  max-width: 180px;
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
 /* ================================
    SEÇÃO FEATURES AVANÇADA
 ================================ */
